@@ -1,13 +1,38 @@
 import { useState } from 'react'
+import { Print } from './components/printCircle'
+import { CircleDiv } from './components/div'
 import './App.css'
 
 function App() {
-  function printMousePos(event) {
-    document.body.innerHTML = `<div class="circle" style="color: yellow; position: absolute; top:${event.clientY}px; left: ${event.clientX}px">${event.clientX} ${event.clientY}</div>`
+
+  let storage = [];
+  const [num, setPrint] = useState()
+
+  function Do() {
+    console.log(storage)
+    divWrapper.insertAdjacentHTML('afterend', storage)
   }
   
-  document.addEventListener("click", printMousePos);
 
+  function Undo(){
+    const circleWrap = document.querySelector('.circle')
+
+    storage.push(circleWrap)
+    
+    circleWrap.remove()
+  }
+
+return (
+  <>
+
+    <button onClick={Undo}>Undo</button>
+    <button onClick={Do}>Do</button>
+    
+    <CircleDiv />
+    
+    
+  </>
+)
 }
 
 export default App

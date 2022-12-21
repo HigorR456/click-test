@@ -1,7 +1,22 @@
+button {
+  height: 50px;
+}
+
 .circle {
-  height: 100px;
-  width: 100px;
-  background-color: rgb(60, 120, 60);
-  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+  border: solid 5px rgb(100, 255, 255);
+  border-radius: 60px;
   translate: -50% -50%;
+  font-size: 15px;
+  color:rgb(100, 255, 255);
+  text-align: center;
+  line-height: 210%;
+  word-break: break-word;
+}
+
+.circleWrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }

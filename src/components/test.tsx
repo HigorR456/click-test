@@ -1,12 +1,15 @@
-const [count, setCount] = useState(0)
-  
+function Number(props) {
     return (
       <div className="App">
-        
         <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+
+          <p>The number state is: {props.num}</p>
+          <div className="circleWrapper" onClick={() => props.setNum(props.num+10)}>Count 10</div>
           
         </div>
-        
       </div>
     )
+}
+
+export { Number }
+
