@@ -2,7 +2,7 @@
 
 Application that renders a circle when you click in the screen with two buttons:
 
-- Undo: undo the previous circle.\
+- Undo: undo the previous circle.
 - Redo: redo the circle previously undid.
 
 It was made using React State.
